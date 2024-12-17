@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>게시물 목록</title>
+    <title>게시글 목록</title>
 </head>
 <body>
-    <h1>게시물 목록</h1>
-    
     <table>
         <thead>
             <tr>
@@ -23,13 +20,5 @@
             </tr>
         </tbody>
     </table>
-    
-    <div th:if="${posts.totalPages > 0}" class="pagination">
-        <span th:each="pageNumber : ${#numbers.sequence(0, posts.totalPages - 1)}">
-            <a th:href="@{/posts(page=${pageNumber})}" 
-               th:text="${pageNumber + 1}"
-               th:class="${pageNumber == posts.number} ? active"></a>
-        </span>
-    </div>
 </body>
 </html> 
