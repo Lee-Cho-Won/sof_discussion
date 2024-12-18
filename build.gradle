@@ -24,7 +24,10 @@ dependencies {
     
     // Jsoup 추가 - 크롤링용
     implementation 'org.jsoup:jsoup:1.15.3'
-    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    
+    // JSP 관련 의존성 유지
+    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+    implementation 'javax.servlet:jstl'
 }
 
 test {
