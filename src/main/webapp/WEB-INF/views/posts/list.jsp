@@ -8,13 +8,13 @@
 </head>
 <body>
     <h1>게시글 목록</h1>
-    <table border="1">
+    <table>
         <thead>
             <tr>
-                <th>ID</th>
+                <th>번호</th>
                 <th>제목</th>
                 <th>작성자</th>
-                <th>작성일</th>
+                <th>생성일자</th>
             </tr>
         </thead>
         <tbody>
@@ -23,7 +23,7 @@
                     <td>${post.id}</td>
                     <td>${post.title}</td>
                     <td>${post.author}</td>
-                    <td>${post.createdDate}</td>
+                    <td>${post.postDate}</td>
                 </tr>
             </c:forEach>
         </tbody>
